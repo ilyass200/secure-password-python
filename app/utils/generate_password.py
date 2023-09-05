@@ -20,7 +20,7 @@ def hash_password(password, hash_algorithm):
     elif hash_algorithm == "md5":
         hasher = hashlib.md5()
     else:
-        raise ValueError("Hash algorithm not supported")
+        raise ValueError("Algorithme de Hash non prit en compte")
 
     hasher.update(password.encode('utf-8'))
     hashed_password = hasher.hexdigest()
