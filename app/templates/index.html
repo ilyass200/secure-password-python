@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ma première application web avec Flask</title>
+    <title>Générateur de Mot de Passe</title>
 </head>
 <body>
-    <h1>Générateur de mot de passe sécurisé</h1>
+    <h1>Générateur de Mot de Passe</h1>
+    <form action="/generate-password" method="post">
+        <label for="password_length">Longueur du Mot de Passe (obligatoire):</label>
+        <input type="number" id="password_length" name="password_length" required>
+        <br>
+        <label for="include_numbers">Inclure des Chiffres (optionnel):</label>
+        <input type="checkbox" id="include_numbers" name="include_numbers" value="true">
+        <br>
+        <label for="include_symbols">Inclure des Symboles (optionnel):</label>
+        <input type="checkbox" id="include_symbols" name="include_symbols" value="true">
+        <br>
+        <input type="submit" value="Générer">
+    </form>
 </body>
 </html>
-
