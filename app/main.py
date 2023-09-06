@@ -17,8 +17,12 @@ def generatePassword():
         password_length = int(request.form.get('password_length'))
         include_numbers = request.form.get('include_numbers') == 'true'
         include_symbols = request.form.get('include_symbols') == 'true'
-        password = generate_password(password_length,include_numbers, include_symbols)
-        
+        try:
+            password = generate_password(password_length,include_numbers, include_symbols)
+            print(password)
+        except ValueError as error:
+            error_msg = str(error)
+            return render_template('index.html',error_generate_password_message=error_msg)
         return render_template('index.html',password=password)
     abort(405)
  
@@ -29,8 +33,11 @@ def generateHashPassword():
         generated_password = request.form.get('generated_password')
         if generated_password == password:
             hash_method = request.form.get('include_hash')
-            password_hashed = hash_password(password,hash_method)
-
+            try:
+                password_hashed = hash_password(password,hash_method)
+            except ValueError as error:
+                error_msg = str(error)
+                return render_template('index.html',error_password_hashed_message=error_msg)
             return render_template('index.html',password=password,password_hashed=password_hashed)
     abort(405)
 

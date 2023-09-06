@@ -17,8 +17,14 @@
         <br>
         <input type="submit" value="Générer">
     </form>
-    <p>Mot de passe généré : <strong>{{ password}}</strong></p>
-    {% if request.path == '/generate-password' %}
+
+    {% if error_generate_password_message %}
+        <p style="color: red;">{{ error_generate_password_message }}</p>
+    {% else %}
+        <p>Mot de passe généré : <strong>{{ password}}</strong></p>
+    {% endif %}
+
+    {% if request.path == '/generate-password' or request.path == '/generate-hash-password' %}
     <hr>
     <h2>Voulez-vous hasher le mot de passe ?</h2>
     <form action="/generate-hash-password" method="post">
@@ -33,8 +39,13 @@
     </form>
     {% endif %}
     
-    {% if request.path == '/generate-hash-password' %}
+    {% if request.path == '/generate-hash-password' and not error_password_hashed_message %}
         <p>Mot de passe généré : <strong>{{ password_hashed }}</strong></p>
     {% endif %}
+    
+    {% if request.path == '/generate-hash-password' and error_password_hashed_message %}
+        <p style="color: red;">{{ error_password_hashed_message }}</p>
+    {% endif %}
+
 </body>
 </html>
