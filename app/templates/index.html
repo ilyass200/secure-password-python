@@ -17,5 +17,24 @@
         <br>
         <input type="submit" value="Générer">
     </form>
+    <p>Mot de passe généré : <strong>{{ password}}</strong></p>
+    {% if request.path == '/generate-password' %}
+    <hr>
+    <h2>Voulez-vous hasher le mot de passe ?</h2>
+    <form action="/generate-hash-password" method="post">
+        <label for="include_hash">Choisissez l'algorithme de hashage</label>
+        <select id="include_hash" name="include_hash">
+            <option value="md5">MD5</option>
+            <option value="sha256">SHA-256</option>
+        </select>
+        <input type="hidden" name="generated_password" value="{{ password }}">
+        <br>
+        <input type="submit" value="Générer">
+    </form>
+    {% endif %}
+    
+    {% if request.path == '/generate-hash-password' %}
+        <p>Mot de passe généré : <strong>{{ password_hashed }}</strong></p>
+    {% endif %}
 </body>
 </html>
