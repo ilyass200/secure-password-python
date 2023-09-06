@@ -13,17 +13,14 @@ def generate_password(taille, use_digits=False, use_symbols=False):
         characters += string.digits
     if use_symbols:
         characters += string.punctuation
-
     # Si l'utilisateur veut un chiffre, ajouter un chiffre aléatoire au mot de passe
     if use_digits:
         characters += random.choice(string.digits)
-
     # Si l'utilisateur veut un caractère de ponctuation, ajouter un caractère de ponctuation aléatoire
     if use_symbols:
         characters += random.choice(string.punctuation)
-
     # Générer le reste du mot de passe
-    password = ''.join(random.choice(characters) for _ in range(taille - 2))  # Soustraire 2 pour les caractères ajoutés ci-dessus
+    password = ''.join(random.choice(characters) for _ in range(taille))
 
     # Mélanger les caractères pour garantir l'aléatoire
     password_list = list(password)
