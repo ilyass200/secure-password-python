@@ -1,4 +1,17 @@
 # secure-password-python
 
-# bugs rencontrés
- - Recuperer les données sous une route lors de la validation du formulaire 
+## Tests fonctionnels 
+
+| Nom du cas de test | Objectif | Préconditions/requirements | ID et nom de l’étape | L’action attendue de l’utilisateur | L’action système attendue | Données de tests | Critères de réussite | Statut de test |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Affichage du formulaire | Vérifier l'affichage du formulaire | Aucune | Étape 1: Accéder à la page web | Accéder à l'URL du formulaire | Afficher le formulaire à l'écran | Aucune | Le formulaire s'affiche correctement | Success |
+| Champ Longueur requis | Vérifier le message d'erreur sans entrer de longueur de mot de passe | Le champ de longueur du mot de passe est requis | Étape 2: Accéder à la page web | Ne rien entrer dans le champ de longueur du mot de passe | Afficher un message d'erreur indiquant que le champ est requis | Aucune | Le message d'erreur s'affiche correctement | À tester |
+| Générer sans options | Générer un mot de passe sans activer d'options | Aucune | Étape 3: Accéder à la page web | Entrer une longueur de mot de passe valide | Cliquer sur le bouton "Générer" | Afficher un mot de passe aléatoire | Le mot de passe est généré correctement | À tester |
+| Générer avec chiffres | Générer un mot de passe avec des chiffres | Aucune | Étape 4: Accéder à la page web | Entrer une longueur de mot de passe valide | Cocher la case "Inclure des chiffres" | Afficher un mot de passe avec des chiffres | Le mot de passe contient des chiffres | À tester |
+| Générer avec symboles | Générer un mot de passe avec des symboles | Aucune | Étape 5: Accéder à la page web | Entrer une longueur de mot de passe valide | Cocher la case "Inclure des symboles" | Afficher un mot de passe avec des symboles | Le mot de passe contient des symboles | À tester |
+| Générer avec chiffres et symboles | Générer un mot de passe avec des chiffres et des symboles | Aucune | Étape 6: Accéder à la page web | Entrer une longueur de mot de passe valide | Cocher les cases "Inclure des chiffres" et "Inclure des symboles" | Afficher un mot de passe avec des chiffres et des symboles | Le mot de passe contient des chiffres et des symboles | À tester |
+| Longueur invalide | Vérifier le message d'erreur avec une longueur invalide | La longueur doit être un nombre positif | Étape 7: Accéder à la page web | Entrer une longueur de mot de passe invalide (par exemple, -5) | Afficher un message d'erreur indiquant que la longueur doit être un nombre positif | Aucune | Le message d'erreur s'affiche correctement | À tester |
+| Générer avec toutes les options | Générer un mot de passe avec toutes les options activées | Aucune | Étape 8: Accéder à la page web | Entrer une longueur de mot de passe valide | Cocher les cases "Inclure des chiffres" et "Inclure des symboles" | Afficher un mot de passe avec des chiffres et des symboles | Le mot de passe contient des chiffres et des symboles | À tester |
+| Cas de test pour SHA-256 | Vérifier le hachage SHA-256 d'un mot de passe | Aucune | Étape 9: Appeler la fonction hash_password | Entrer un mot de passe correct | Calculer le hachage SHA-256 du mot de passe | Mot de passe valide, Algorithme SHA-256 | Le hachage SHA-256 est calculé correctement | À tester |
+| Cas de test pour MD5 | Vérifier le hachage MD5 d'un mot de passe | Aucune | Étape 10: Appeler la fonction hash_password | Entrer un mot de passe correct | Calculer le hachage MD5 du mot de passe | Mot de passe valide, Algorithme MD5 | Le hachage MD5 est calculé correctement | À tester |
+| Cas de test pour algorithme non pris en charge | Gérer un algorithme non pris en charge | Aucune | Étape 11: Appeler la fonction hash_password | Entrer un mot de passe correct | Lever une exception ValueError | Mot de passe valide, Algorithme non pris en charge | Une exception ValueError est levée | À tester |
