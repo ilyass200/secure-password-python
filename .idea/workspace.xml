@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d36aaad-c2cc-4857-8900-9700401c70b7" name="Changes" comment="Mise en place des tests">
+    <list default="true" id="0d36aaad-c2cc-4857-8900-9700401c70b7" name="Changes" comment="add test - add selenium test - update front">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/test/seleniumTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/seleniumTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test/test_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/test_basic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requierements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requierements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694011949695</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add test - add selenium test - update front">
+      <option name="closed" value="true" />
+      <created>1694078837722</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694078837722</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,6 +283,7 @@
     <MESSAGE value="Generate functions" />
     <MESSAGE value="modif functions" />
     <MESSAGE value="Mise en place des tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place des tests" />
+    <MESSAGE value="add test - add selenium test - update front" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test - add selenium test - update front" />
   </component>
 </project>
