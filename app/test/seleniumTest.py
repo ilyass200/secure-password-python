@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 
 
 def generic_selenium_test(taille, boxCheck, hashAlgorithm):
-    driver = webdriver.Chrome()  
+    driver = webdriver.Chrome()
     driver.get("http://127.0.0.1:8080/")
 
     password_length_field = driver.find_element(By.NAME, "password_length")
