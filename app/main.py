@@ -39,6 +39,8 @@ def generateHashPassword():
                 error_msg = str(error)
                 return render_template('index.html',error_password_hashed_message=error_msg)
             return render_template('index.html',password=password,password_hashed=password_hashed)
+    if request.method == "POST" and password:
+        return render_template('index.html',error_password_hashed_message="Veuillez générer un mot de passe")
     abort(405)
 
 if __name__ == '__main__':
