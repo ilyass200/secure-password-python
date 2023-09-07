@@ -5,7 +5,7 @@ from app.utils.generate_password import generate_password
 
 class TestGeneratePassword(unittest.TestCase):
 
-    def test_generate_password_with_digits_and_symbols(self):
+    def test_geration_pass_password_with_digits_and_symbols(self):
         password = generate_password(12, use_digits=True, use_symbols=True)
         self.assertEqual(len(password), 12)
         self.assertTrue(any(char.isdigit() for char in password))
