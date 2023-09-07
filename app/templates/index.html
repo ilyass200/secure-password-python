@@ -18,7 +18,12 @@
         <input type="submit" name= "btn_generer" value="Générer">
     </form>
 
-    <p class="passwordSaved" style="color: green;">{{passwordSavedMsg}}</p>
+    {% if passwordSavedMsg and request.path == "/generate-password" %}
+        <p class="passwordSaved" style="color: green;">{{passwordSavedMsg}}</p>
+    {% endif %}
+    {% if not passwordSavedMsg and request.path == "/generate-password" %}
+        <p class="passwordSaved" style="color: red;">Une erreur s'est produite lors de l'enregistrement du mot de passe !</p>
+    {% endif %}
     
     {% if error_generate_password_message %}
         <p style="color: red;">{{ error_generate_password_message }}</p>

@@ -1,6 +1,7 @@
 # Simulation de la passerelle du cloud externe
 class ExternalGateway:
-    def save_password(self, password):
+    def save_password(password):
+        print(password)
         if password:
             return True
         else:

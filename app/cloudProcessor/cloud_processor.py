@@ -5,6 +5,7 @@ class CloudProcessor:
     def save_password(self, password):
         try: 
             # Utilisation de la passerelle du cloud externe pour effectuer la sauvegarde
+            print('password : ',password)
             result = self.external_gateway.save_password(password)
             if result:
                 return True # Sauvegarde réussie
@@ -12,5 +13,4 @@ class CloudProcessor:
                 return False # Sauvegarde echouée
         except Exception as e:
             # Gérer les exceptions liées au cloud (ex: une connexion réseau perdue)
-            print(f"Erreur lors du traitement de la sauvegarde du mot de passe : {str(e)}")
             return False

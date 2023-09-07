@@ -21,10 +21,11 @@ def generatePassword():
         include_symbols = request.form.get('include_symbols') == 'true'
         try:
             password = generate_password(password_length,include_numbers, include_symbols)
+            cloud_processor = CloudProcessor(ExternalGateway)
         except ValueError as error:
             error_msg = str(error)
             return render_template('index.html',error_generate_password_message=error_msg)
-        if(ExternalGateway.save_password(password)):
+        if(cloud_processor.save_password(password)):
             passwordSavedMsg = "Votre mot de passe a bien été enregistré dans le cloud !"
         return render_template('index.html',password=password,passwordSavedMsg=passwordSavedMsg)
     abort(405)
