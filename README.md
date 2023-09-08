@@ -34,17 +34,13 @@ Liste des Fonctions de la classe:
 
 ### Problèmes rencontrés
 
-Dans l'écriture des tests unitaires, nous avons été confronté à divers problèmes.  
-Nos tests ont échoués car notre algorithme de génération de mots de passe ne fonctionnait pas correctement.  
-Pour resoud
-
-&nbsp;
 
 | N°  | Problèmes | Resolution | Observation |
 | --- | --- | --- | --- |
 | 1   | Nos tests ont échoués car notre algorithme de génération  <br>  <br>de mots de passe ne fonctionnait pas correctement. | Changement d'algorithme en s'assurant de prendre en compte la présence d'au moins un chiffre ou symbole lorsque ceux-ci sont spécifié. |     |
-| 2   | On  | Selenium | Étape 2: Accéder à la page web |
-| 3   | `test_generate_password_without_digits_and_symbols:` | selenium, Test Unitaire | Étape 3: Accéder à la page web |
+| 2   | Pour la génération de mot de passe.., | Selenium |     |
+| 3   | On a eu du mal a démarrer l'application web | app.run(8080) |     |
+
 
 ## Tests fonctionnels
 
