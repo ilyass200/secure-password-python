@@ -35,12 +35,11 @@ Liste des Fonctions de la classe:
 ### Problèmes rencontrés
 
 
-| N°  | Problèmes | Resolution | Observation |
-| --- | --- | --- | --- |
-| 1   | Nos tests ont échoués car notre algorithme de génération  <br>  <br>de mots de passe ne fonctionnait pas correctement. | Changement d'algorithme en s'assurant de prendre en compte la présence d'au moins un chiffre ou symbole lorsque ceux-ci sont spécifié. |     |
-| 2   | Pour la génération de mot de passe.., | Selenium |     |
-| 3   | On a eu du mal a démarrer l'application web | app.run(8080) |     |
-
+| N°  | Problèmes | Resolution |
+| --- | --- | --- |
+| 1   | Nos tests ont échoués car notre algorithme de génération  <br>de mots de passe ne fonctionnait pas correctement. | Changement d'algorithme en s'assurant de prendre en compte la présence d'au moins un chiffre ou symbole lorsque ceux-ci sont spécifié. |
+| 2   | Quand une partie du code est caché dans le formulaire. On n'arrivait pas récupérer les Ids au noveau de selenium | Utilisation de combinaison de fonctions ( `WebDriverWait` et `presence_of_element_located` ) pour attendre la présence de l'élément dans le DOM pour l'utiliser. |
+| 3   | On a eu du mal a démarrer l'application web | app.run(8080) |
 
 ## Tests fonctionnels
 

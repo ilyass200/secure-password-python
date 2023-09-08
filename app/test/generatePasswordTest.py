@@ -51,7 +51,7 @@ class TestHashPassword(unittest.TestCase):
         self.assertEqual(len(hashed_password), 32)
 
     def test_hash_password_invalid_algorithm(self):
-        # Test password hashing with invalid algorithm
+        # Tester le MP avec un algo non Valide
         test_password = "testpassword"
         with self.assertRaises(ValueError):
             hash_password(test_password, "invalid_algorithm")
