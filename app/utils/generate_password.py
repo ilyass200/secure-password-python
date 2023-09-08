@@ -20,7 +20,15 @@ def generate_password(taille, use_digits=False, use_symbols=False):
 
     password_list = list(password) # Mélanger les caractères
     random.shuffle(password_list)
+
+    if use_digits and not any(c.isdigit() for c in password_list):
+        password_list[0] = random.choice(string.digits)
+
+    if use_symbols and not any(c in string.punctuation for c in password_list):
+        password_list[-1] = random.choice(string.punctuation)
+
     return ''.join(password_list)
+
 
 
 def hash_password(password, hash_algorithm):

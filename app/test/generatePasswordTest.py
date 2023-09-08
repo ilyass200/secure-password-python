@@ -1,6 +1,6 @@
 import string
 import unittest
-from app.utils.generate_password import generate_password
+from app.utils.generate_password import generate_password, hash_password
 
 
 class TestGeneratePassword(unittest.TestCase):
@@ -32,6 +32,29 @@ class TestGeneratePassword(unittest.TestCase):
     def test_generate_password_invalid_length(self):
         with self.assertRaises(ValueError):
             generate_password(6, use_digits=True, use_symbols=True)
+
+
+class TestHashPassword(unittest.TestCase):
+
+    def test_hash_password_sha256(self):
+        # Test password hashing with SHA-256
+        test_password = "testpassword"
+        hashed_password = hash_password(test_password, "sha256")
+        self.assertTrue(isinstance(hashed_password, str))
+        self.assertEqual(len(hashed_password), 64)
+
+    def test_hash_password_md5(self):
+        # Test password hashing with MD5
+        test_password = "testpassword"
+        hashed_password = hash_password(test_password, "md5")
+        self.assertTrue(isinstance(hashed_password, str))
+        self.assertEqual(len(hashed_password), 32)
+
+    def test_hash_password_invalid_algorithm(self):
+        # Test password hashing with invalid algorithm
+        test_password = "testpassword"
+        with self.assertRaises(ValueError):
+            hash_password(test_password, "invalid_algorithm")
 
 
 if __name__ == '__main__':
