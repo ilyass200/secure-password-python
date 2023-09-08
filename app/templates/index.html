@@ -31,6 +31,19 @@
         <p>Mot de passe généré : <strong>{{ password}}</strong></p>
     {% endif %}
 
+
+    {% if request.path == "/generate-password" %}
+        {% if complexity_password == "faible" %}
+        <p>Complexité du mot de passe : <span style="color: red;">{{complexity_password}}</span></p>
+        {% endif %}
+        {% if complexity_password == "moyen" %}
+        <p>Complexité du mot de passe : <span style="color: orange;">{{complexity_password}}</span></p>
+        {% endif %}
+        {% if complexity_password == "fort" %}
+        <p>Complexité du mot de passe : <span style="color: green;">{{complexity_password}}</span></p>
+        {% endif %}
+    {% endif %}
+
     {% if request.path == '/generate-password' or request.path == '/generate-hash-password' %}
     <hr>
     <h2>Voulez-vous hasher le mot de passe ?</h2>
@@ -45,13 +58,13 @@
         <input type="submit"  name= "btn_hash" value="Générer MP Hashé">
     </form>
     {% endif %}
+
+    {% if request.path == '/generate-hash-password' and error_password_hashed_message %}
+    <p style="color: red;">{{ error_password_hashed_message }}</p>
+    {% endif %}
     
     {% if request.path == '/generate-hash-password' and not error_password_hashed_message %}
         <p>Mot de passe généré : <strong>{{ password_hashed }}</strong></p>
-    {% endif %}
-    
-    {% if request.path == '/generate-hash-password' and error_password_hashed_message %}
-        <p style="color: red;">{{ error_password_hashed_message }}</p>
     {% endif %}
 
 </body>

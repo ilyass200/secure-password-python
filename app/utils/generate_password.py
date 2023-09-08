@@ -1,11 +1,10 @@
 import random
 import string
 import hashlib
-
+import re
 
 def generate_password(taille, use_digits=False, use_symbols=False):
-    # Vérifier que la longueur est un entier compris entre 8 et 50
-    if not (isinstance(taille, int) and 8 <= taille <= 50):
+    if not (isinstance(taille, int) and 8 <= taille <= 50): # longueur entre 8 et 50
         raise ValueError("La longueur doit être un entier entre 8 et 50 inclus.")
 
     characters = string.ascii_letters
@@ -13,17 +12,13 @@ def generate_password(taille, use_digits=False, use_symbols=False):
         characters += string.digits
     if use_symbols:
         characters += string.punctuation
-    # Si l'utilisateur veut un chiffre, ajouter un chiffre aléatoire au mot de passe
     if use_digits:
         characters += random.choice(string.digits)
-    # Si l'utilisateur veut un caractère de ponctuation, ajouter un caractère de ponctuation aléatoire
-    if use_symbols:
+    if use_symbols: 
         characters += random.choice(string.punctuation)
-    # Générer le reste du mot de passe
-    password = ''.join(random.choice(characters) for _ in range(taille))
+    password = ''.join(random.choice(characters) for _ in range(taille)) # Générer le reste du mot de passe
 
-    # Mélanger les caractères pour garantir l'aléatoire
-    password_list = list(password)
+    password_list = list(password) # Mélanger les caractères
     random.shuffle(password_list)
     return ''.join(password_list)
 
@@ -40,6 +35,29 @@ def hash_password(password, hash_algorithm):
     hashed_password = hasher.hexdigest()
     return hashed_password
 
+def check_complexity_password(password):
+    complexity = "faible"  # par défaut
+    
+    if len(password) >= 15:
+        complexity = "moyen"
+    
+    if any(char.isdigit() for char in password):
+        complexity = "moyen"
+    
+    if any(char.isupper() for char in password):
+        complexity = "moyen"
+    
+    if len(password) >= 30:
+        complexity = "fort"
+
+    include_symbols = re.findall(r'[!@#$%^&*(),.?":{}|<>]', password)
+    if len(include_symbols) >= 3:
+        complexity = "fort"
+    
+    if sum(char.isdigit() for char in password) > 2 and len(include_symbols) > 2:
+        complexity = "fort"
+    
+    return complexity
 
 if __name__ == "__main__":
     taille = int(input("Entrez la longueur du mot de passe : "))

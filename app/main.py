@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, abort
 from utils.generate_password import generate_password
 from utils.generate_password import hash_password
+from utils.generate_password import check_complexity_password       
 from cloudProcessor.cloud_processor import CloudProcessor
 from cloudProcessor.external_gateway import ExternalGateway 
 app = Flask(__name__)
@@ -27,7 +28,9 @@ def generatePassword():
             return render_template('index.html',error_generate_password_message=error_msg)
         if(cloud_processor.save_password(password)):
             passwordSavedMsg = "Votre mot de passe a bien été enregistré dans le cloud !"
-        return render_template('index.html',password=password,passwordSavedMsg=passwordSavedMsg)
+        complexity_password = check_complexity_password(password)
+        print(complexity_password)
+        return render_template('index.html',password=password,passwordSavedMsg=passwordSavedMsg,complexity_password=complexity_password)
     abort(405)
  
 @app.route('/generate-hash-password', methods=['GET', 'POST'])
