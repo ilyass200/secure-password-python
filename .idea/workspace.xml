@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d36aaad-c2cc-4857-8900-9700401c70b7" name="Changes" comment="correct test">
+    <list default="true" id="0d36aaad-c2cc-4857-8900-9700401c70b7" name="Changes" comment="set all UnitTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/test/generatePasswordTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/generatePasswordTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/seleniumTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/seleniumTest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +37,20 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LYAG&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8ef6ac49-22b2-48ae-8213-bea16b81a957" />
+        <option name="url" value="https://github.com/ilyass200/secure-password-python.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,8 +80,50 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in generatePasswordTest.py">
-    <configuration name="Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_with_symbols_only" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.generate_password">
+    <configuration name="generate_password" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="secure-password-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/utils/generate_password.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="seleniumTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="secure-password-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/test/seleniumTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_invalid_length" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="secure-password-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -74,11 +133,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;generatePasswordTest.TestGeneratePassword.test_generate_password_with_symbols_only&quot;" />
+      <option name="_new_target" value="&quot;generatePasswordTest.TestGeneratePassword.test_generate_password_invalid_length&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for generatePasswordTest.TestHashPassword" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_with_digits_only" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="secure-password-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -88,11 +147,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;generatePasswordTest.TestHashPassword&quot;" />
+      <option name="_new_target" value="&quot;generatePasswordTest.TestGeneratePassword.test_generate_password_with_digits_only&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for generatePasswordTest.TestHashPassword.test_hash_password_invalid_algorithm" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_without_digits_and_symbols" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="secure-password-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,52 +161,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;generatePasswordTest.TestHashPassword.test_hash_password_invalid_algorithm&quot;" />
+      <option name="_new_target" value="&quot;generatePasswordTest.TestGeneratePassword.test_generate_password_without_digits_and_symbols&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for generatePasswordTest.TestHashPassword.test_hash_password_md5" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="secure-password-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;generatePasswordTest.TestHashPassword.test_hash_password_md5&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in generatePasswordTest.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="secure-password-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/app/test/generatePasswordTest.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_with_symbols_only" />
-      <item itemvalue="Python tests.Python tests for generatePasswordTest.TestHashPassword" />
-      <item itemvalue="Python tests.Python tests for generatePasswordTest.TestHashPassword.test_hash_password_invalid_algorithm" />
-      <item itemvalue="Python tests.Python tests for generatePasswordTest.TestHashPassword.test_hash_password_md5" />
-      <item itemvalue="Python tests.Python tests in generatePasswordTest.py" />
+      <item itemvalue="Python.generate_password" />
+      <item itemvalue="Python.seleniumTest" />
+      <item itemvalue="Python tests.Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_invalid_length" />
+      <item itemvalue="Python tests.Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_with_digits_only" />
+      <item itemvalue="Python tests.Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_without_digits_and_symbols" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in generatePasswordTest.py" />
-        <item itemvalue="Python tests.Python tests for generatePasswordTest.TestHashPassword.test_hash_password_invalid_algorithm" />
-        <item itemvalue="Python tests.Python tests for generatePasswordTest.TestHashPassword.test_hash_password_md5" />
-        <item itemvalue="Python tests.Python tests for generatePasswordTest.TestHashPassword" />
-        <item itemvalue="Python tests.Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_with_symbols_only" />
+        <item itemvalue="Python.generate_password" />
+        <item itemvalue="Python tests.Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_invalid_length" />
+        <item itemvalue="Python tests.Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_without_digits_and_symbols" />
+        <item itemvalue="Python tests.Python tests for generatePasswordTest.TestGeneratePassword.test_generate_password_with_digits_only" />
+        <item itemvalue="Python.seleniumTest" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694097604749</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="set all UnitTest">
+      <option name="closed" value="true" />
+      <created>1694098093321</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1694098093321</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,6 +328,7 @@
     <MESSAGE value="add test - add generic selenium test function - update front" />
     <MESSAGE value="fix generate_password bug" />
     <MESSAGE value="correct test" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct test" />
+    <MESSAGE value="set all UnitTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="set all UnitTest" />
   </component>
 </project>

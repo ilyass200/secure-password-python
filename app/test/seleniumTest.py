@@ -36,3 +36,4 @@ def generic_selenium_test(taille, boxCheck, hashAlgorithm):
 if __name__ == '__main__':
     generic_selenium_test(5, "include_numbers", "md5")
     generic_selenium_test(12, "include_symbols", "sha256")
+    generic_selenium_test(18, "include_symbols", "")
